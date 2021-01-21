@@ -115,7 +115,7 @@ def display(confusion_matrix, categories, output_path):
     with open(output_path, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["TP", "FP", "FN", "TN"])
-        writer.writerow([confusion_matrix[0][1], confusion_matrix[0][1],confusion_matrix[1][0],confusion_matrix[1][1]])
+        writer.writerow([confusion_matrix[0][0], confusion_matrix[0][1],confusion_matrix[1][0],confusion_matrix[1][1]])
 
     for i in range(len(categories)):
         id = categories[i]["id"] - 1
